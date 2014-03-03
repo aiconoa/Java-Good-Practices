@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="ExamplePU">
+        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+        <jta-data-source>java:jboss/H2Local</jta-data-source>
+        <class>com.aiconoa.bpj.javaeedemo.model.Person</class>
+
+        <properties>
+            <!-- it seems that there is a bug between H2 and Hibernate: weird script loading behavior -->
+            <!-- <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+            <!--<property name="javax.persistence.schema-generation.create-source" value="metadata"/>-->
+            <!--<property name="javax.persistence.schema-generation.drop-source" value="metadata"/>-->
+            <!--<property name="javax.persistence.sql-load-script-source" value="META-INF/sql/load_script.sql"/>-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+        </properties>
+    </persistence-unit>
+</persistence>
