@@ -1,7 +1,7 @@
 Java-Good-Practices
 ===================
 
-Demos from our Java Good Practices tutorial
+Demos from our Java Good Practices trainings
 
 Contains the following desktop demos:
 * class loading
